@@ -15,9 +15,9 @@ const agregarIngreso = () =>{
     let nuevoIngreso = +prompt("Agrega nuevo ingreso: ");
     if (!isNaN(nuevoIngreso)) {
        listaIngresos.push(nuevoIngreso);
-       alert("Se ha registrado correctamente!");
+       alert("✅ Se ha registrado correctamente!");
    } else {
-       alert("Debe ingresar un valor numérico");
+       alert("❌ Debe ingresar un valor numérico");
    }
 }
 
@@ -32,13 +32,11 @@ const totalIngresos = () => {
 
 const mostrarIngresos = () =>  {
     if (listaIngresos.length === 0) {
-        alert("No hay ingresos registrados.");
+        alert("🙃 No hay ingresos registrados.");
     } else {
         alert("Lista de ingresos:\n" + listaIngresos.join("\n"));
     }
 }
-
-
 
 // FUNCIONES GASTOS
 
@@ -46,9 +44,9 @@ const agregarGasto = () =>  {
     let nuevoGasto = +prompt("Ingresa un nuevo valor de pasivo:");
     if (!isNaN(nuevoGasto)) {
         listaGastos.push(nuevoGasto);
-        alert("Se ha registrado correctamente!");
+        alert("✅ Se ha registrado correctamente!");
     } else {
-        alert("Debe ingresar un valor numérico");
+        alert("❌ Debe ingresar un valor numérico");
     }
 }
 
@@ -63,7 +61,7 @@ const totalGastos = () => {
 
 const mostrarGastos = () =>  {
     if (listaGastos.length === 0) {
-        alert("No hay ingresos registrados.");
+        alert("🙃 No hay ingresos registrados.");
     } else {
         alert("Lista de tus gastos:\n" + listaGastos.join("\n"));
     }
@@ -75,11 +73,11 @@ const mostrarGastos = () =>  {
 
 function comparacionPasivosActivos(totalGastos, totalIngresos) {
     if (totalGastos > totalIngresos) {
-        return "Tus gastos superan tus ingresos. ¡Ten cuidado!";
+        return "Tus gastos superan tus ingresos. ¡Ten cuidado! 🫤";
     } else if (totalIngresos > totalGastos) {
-        return "Tus ingresos superan tus gastos. ¡Sigue así!";
+        return "Tus ingresos superan tus gastos. ¡Sigue así! 💪";
     } else {
-        return "Tus ingresos y gastos están equilibrados, pero asegúrate de revisar tus gastos detenidamente.";
+        return "Tus ingresos y gastos están equilibrados, pero asegúrate de revisar tus gastos detenidamente.👍";
     }
 }
 
@@ -123,7 +121,7 @@ while (true) {
 
     const deseaContinuar = confirm("¿Desea realizar otra operación?");
     if (!deseaContinuar) {
-        alert("Hasta pronto!")
+        alert("Hasta pronto!👋")
         break;
     }
 }
