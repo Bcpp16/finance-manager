@@ -11,18 +11,18 @@ function opcionesMenu() {
 
 // FUNCIONES INGRESOS
 
-function agregarIngreso() {
-    let nuevoIngreso = +prompt("Ingresa un nuevo valor de activo:");
+const agregarIngreso = () =>{
+    let nuevoIngreso = +prompt("Agrega nuevo ingreso: ");
     if (!isNaN(nuevoIngreso)) {
-        listaIngresos.push(nuevoIngreso);
-        alert("Se ha registrado correctamente!");
-    } else {
-        alert("Debe ingresar un valor numérico");
-    }
+       listaIngresos.push(nuevoIngreso);
+       alert("Se ha registrado correctamente!");
+   } else {
+       alert("Debe ingresar un valor numérico");
+   }
 }
 
 
-function totalIngresos() {
+const totalIngresos = () => {
     let total = 0;
     for (let i = 0; i < listaIngresos.length; i++) {
         total += listaIngresos[i];
@@ -30,7 +30,7 @@ function totalIngresos() {
     alert("Tienes un total de ingresos: " + total);
 }
 
-function mostrarIngresos() {
+const mostrarIngresos = () =>  {
     if (listaIngresos.length === 0) {
         alert("No hay ingresos registrados.");
     } else {
@@ -42,7 +42,7 @@ function mostrarIngresos() {
 
 // FUNCIONES GASTOS
 
-function agregarGasto() {
+const agregarGasto = () =>  {
     let nuevoGasto = +prompt("Ingresa un nuevo valor de pasivo:");
     if (!isNaN(nuevoGasto)) {
         listaGastos.push(nuevoGasto);
@@ -53,7 +53,7 @@ function agregarGasto() {
 }
 
 
-function totalGastos() {
+const totalGastos = () => {
     let total = 0;
     for (let i = 0; i < listaGastos.length; i++) {
         total += listaGastos[i];
@@ -61,7 +61,7 @@ function totalGastos() {
     alert("Tienes un total de gastos: " + total);
 }
 
-function mostrarGastos() {
+const mostrarGastos = () =>  {
     if (listaGastos.length === 0) {
         alert("No hay ingresos registrados.");
     } else {
