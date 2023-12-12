@@ -4,7 +4,7 @@ let listaGastos = [];
 
 // MENU OPCIONES 
 function opcionesMenu() {
-    return +prompt("¿Qué desea realizar?\n\n INGRESOS \n 1 - Agregar ingreso \n 2 - Mostrar todos los ingresos \n 3 - Calcular total de ingresos \n\n GASTOS \n 4 - Agregar gasto \n 5 - Mostrar todos los gastos \n 6 - Calcular total de gastos ");
+    return +prompt("¿Qué desea realizar?\n\n INGRESOS \n 1 - Agregar ingreso \n 2 - Mostrar todos los ingresos \n 3 - Calcular total de ingresos \n\n GASTOS \n 4 - Agregar gasto \n 5 - Mostrar todos los gastos \n 6 - Calcular total de gastos \n\n ==== \n 7 - Comparar gastos e ingresos");
 }
 
 
@@ -71,6 +71,19 @@ const mostrarGastos = () =>  {
 
 
 
+// FUNCIONES COMPARAR ACTIVOS vs PASIVOS 
+
+function comparacionPasivosActivos(totalGastos, totalIngresos) {
+    if (totalGastos > totalIngresos) {
+        return "Tus gastos superan tus ingresos. ¡Ten cuidado!";
+    } else if (totalIngresos > totalGastos) {
+        return "Tus ingresos superan tus gastos. ¡Sigue así!";
+    } else {
+        return "Tus ingresos y gastos están equilibrados, pero asegúrate de revisar tus gastos detenidamente.";
+    }
+}
+
+
 // ELECCION DE MENU OPCIONES 
 
 while (true) {
@@ -95,6 +108,15 @@ while (true) {
             totalGastos();
             break;
 
+        case 7:
+            // Calcular los totales antes de pasarlos a la función
+            const totalGastos = calcularTotal(listaGastos);
+            const totalIngresos = calcularTotal(listaIngresos);
+            const mensajeComparacion = comparacionPasivosActivos(totalGastos, totalIngresos);
+            alert(mensajeComparacion);
+            break;
+    
+           
         default:
             alert("Ingresaste un valor inválido");
     }
@@ -104,4 +126,9 @@ while (true) {
         alert("Hasta pronto!")
         break;
     }
+}
+
+// Función para calcular el total de una lista de valores
+function calcularTotal(lista) {
+    return lista.reduce((total, valor) => total + valor, 0);
 }
