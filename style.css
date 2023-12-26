@@ -1,0 +1,137 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    /* Colors */
+    --black: #070707;
+    --dark-gray:#1E201F;
+    --white: #fff;
+    --gray: #E2E2E2;
+    --blue: #00AEE5;
+    --green: #14B789;
+    --pink: #E50087;
+    --violet: #802FDE;
+    --yellow: #E0B61F;
+
+    /* Backgrounds */
+    --bg-green: #D5F8EF; 
+    --bg-blue: #D8F6FF;
+    --bg-pink: #FFE5F4;
+    --bg-violet: #E8E2F7;
+    --bg-yellow: #FDF3CE;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--black);
+
+}
+
+/* MENU */
+
+nav{
+    background-color: var(--dark-gray);
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Centrar verticalmente */
+    padding: 35px;
+    position: fixed;
+}
+
+
+
+#logo{
+    color: var(--white);
+    font-weight: 800;
+    font-size: 20px;
+    text-decoration: none;
+    
+}
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 70px;
+}
+
+.itemMenu {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.icono{
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+.version{
+    font-size: 12px;
+}
+
+/* FIN MENU */
+
+
+/* MAIN */
+
+main{
+    position: relative;
+    margin-left: 250px;
+    margin-right: 40px;
+    padding: 35px;
+    
+}
+
+h1{
+    font-size: 20px;
+}
+
+.container-cards{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.card{
+    width: 500px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.card1{
+    background-color: var(--bg-blue);
+}
+
+.card2{
+    background-color: var(--bg-green);
+}
+
+.card3{
+    background-color: var(--bg-pink);
+}
+
+
+.cardTotal{
+    position: absolute;
+    width: 66%;
+    height: 410px;
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+}
+
