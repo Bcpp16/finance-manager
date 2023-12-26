@@ -23,7 +23,7 @@ const agregarIngreso = () =>{
 
 
 const totalIngresos = () => {
-    let total = 0;
+    let total = 0; 
     for (let i = 0; i < listaIngresos.length; i++) {
         total += listaIngresos[i];
     }
@@ -108,9 +108,9 @@ while (true) {
 
         case 7:
             // Calcular los totales antes de pasarlos a la función
-            const totalGastos = calcularTotal(listaGastos);
-            const totalIngresos = calcularTotal(listaIngresos);
-            const mensajeComparacion = comparacionPasivosActivos(totalGastos, totalIngresos);
+            const totalGasto = calcularTotal(listaGastos);
+            const totalIngreso = calcularTotal(listaIngresos);
+            const mensajeComparacion = comparacionPasivosActivos(totalGasto, totalIngreso);
             alert(mensajeComparacion);
             break;
     
