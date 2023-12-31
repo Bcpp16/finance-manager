@@ -11,10 +11,10 @@
 
 :root{
     /* Colors */
-    --black: #070707;
-    --dark-gray:#1E201F;
+    --black: #232530;
+    --dark-gray:#44474E;
     --white: #fff;
-    --gray: #E2E2E2;
+    --gray: #828489;
     --blue: #00AEE5;
     --green: #14B789;
     --pink: #E50087;
@@ -40,14 +40,16 @@ body{
 /* MENU */
 
 nav{
-    background-color: var(--dark-gray);
-    width: 200px;
+    border-right: 1px solid var(--gray);
+    width: 100px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Centrar verticalmente */
+    justify-content: space-between; 
+    align-items: center;
     padding: 35px;
     position: fixed;
+    text-align: center;
 }
 
 
@@ -65,19 +67,42 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-top: 70px;
+    margin-top: 100px;
 }
 
-.itemMenu {
+.itemMenu i{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+}
+
+
+
+.menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+}
+.itemMenu{
     text-decoration: none;
     color: var(--white);
 }
 
-.icono{
-    font-size: 15px;
-    margin-right: 10px;
+.itemMenu i{
+    font-size: 18px;
 }
 
+
+.blkMenu{
+    width: 100px;
+}
+
+
+.blkMenu:hover{
+    border-right: 3px solid var(--white);
+}
 
 .version{
     font-size: 12px;
@@ -90,14 +115,35 @@ nav{
 
 main{
     position: relative;
-    margin-left: 250px;
+    margin-left: 100px;
     margin-right: 40px;
     padding: 35px;
     
 }
 
 h1{
-    font-size: 20px;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.container-bienvenida{
+    width: 100%;
+    height: 300px;
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+}
+
+.cardBienvenida{
+    padding: 40px;
+    font-size: 22px;
+}
+
+
+.img-bienvenida{
+    width: 20%;
+    float: right;
+    display: flex;
+    justify-content: center;
 }
 
 .container-cards{
@@ -107,6 +153,7 @@ h1{
     gap: 30px;
     margin: 40px 0;
 }
+
 
 .card{
     width: 500px;
@@ -127,11 +174,4 @@ h1{
 }
 
 
-.cardTotal{
-    position: absolute;
-    width: 66%;
-    height: 410px;
-    background-color: var(--dark-gray);
-    border-radius: 20px;
-}
 
